@@ -13,6 +13,8 @@ In `_layouts/default.html`, add `infinite-jekyll.js` after jQuery:
 
 	<script src="/js/infinite-jekyll.js"></script>
 
+### Render posts, not links
+
 Per default, Jekyll renders links to all of your posts ever made. For lazy loading to make sense, we need to set a limit. Open up `index.html` and find this line:
 
 	{% for post in site.posts %}
@@ -21,7 +23,7 @@ And change it to:
 
 	{% for post in site.posts limit: 10 %}	
 
-How fun is it to only see links on the front page? Time to render those posts. Open up `index.html`. Find this line: 
+And how fun is it to only see links on the front page? Time to render those posts. Open up `index.html`. Find this line: 
 
 	<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
 
@@ -35,6 +37,8 @@ Replace it with this:
 		{{ post.content }}
 		</div>
 	</li>
+
+### Add the spinner
 
 You should now see the 10 latest posts in the entirety on your front page, but no infinite scroll yet. Infinite Jekyll will only try to lazy load posts if there's a spinner visible. At the very end of `index.html`, add the spinner:
 
