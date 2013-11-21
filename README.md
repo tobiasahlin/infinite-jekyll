@@ -19,7 +19,7 @@ Per default, Jekyll renders links to all of your posts ever made. For lazy loadi
 
 	{% for post in site.posts %}
 
-And change it to:
+Change it to:
 
 	{% for post in site.posts limit: 10 %}	
 
@@ -40,7 +40,7 @@ Replace it with this:
 
 ### Add the spinner
 
-You should now see the 10 latest posts in the entirety on your front page, but no infinite scroll yet. Infinite Jekyll will only try to lazy load posts if there's a spinner visible. At the very end of `index.html`, add the spinner:
+You should now see the 10 latest posts on your front page, but no infinite scroll yet. Infinite Jekyll will only try to lazy load posts if there's a spinner visible. At the very end of `index.html`, add the spinner:
 
 	<div class="infinite-spinner"></div>
 
