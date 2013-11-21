@@ -5,11 +5,11 @@ Infinite Jekyll
 
 ## Getting Started
 
-Include all files at the root of your Jekyll site. If you're not already using jQuery, open `_layouts/default.html` and add it:
+Include all files at the root of your Jekyll site. If you're not already using jQuery, open `_layouts/default.html` and include it:
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
-In `_layouts/default.html`, add `infinite-jekyll.js` after jQuery:
+In `_layouts/default.html`, include `infinite-jekyll.js` after jQuery:
 
 	<script src="/js/infinite-jekyll.js"></script>
 
