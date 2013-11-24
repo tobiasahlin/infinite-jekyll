@@ -32,7 +32,7 @@ Remove everything within the `li`. Open up `_layouts/post.html` and copy the mar
 
 ### Limit the number of posts
 
-Per default, Jekyll renders all posts. For lazy loading to make sense, we need to set a limit. Open up `index.html` and find this line:
+Per default, Jekyll will render all posts in your entire archive. For lazy loading to make sense, we need to set a limit. Open up `index.html` and find this line:
 
 	{% for post in site.posts %}
 
