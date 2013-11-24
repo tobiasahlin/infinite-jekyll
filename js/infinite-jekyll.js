@@ -9,6 +9,10 @@ $(function() {
   // Load the JSON file containing all URLs
   $.getJSON('/all-posts.json', function(data) {
     postURLs = data["posts"];
+    
+    // If there aren't any more posts available to load than already visible, disable fetching
+    if (postURLs.length <= postsToLoad)
+      disableFetching();
   });
 	
   // If there's no spinner, it's not a page where posts should be fetched
