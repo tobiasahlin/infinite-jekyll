@@ -1,7 +1,7 @@
 Infinite Jekyll
 ===============
 
-[WIP] Infinite scroll for Jekyll based blogs. See it in action at [tobiasahlin.com/blog/](http://tobiasahlin.com/blog).
+Infinite scroll for Jekyll based blogs. See it in action at [tobiasahlin.com/blog/](http://tobiasahlin.com/blog).
 
 ## Getting Started
 
