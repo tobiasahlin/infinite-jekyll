@@ -40,7 +40,7 @@ Replace it with this:
 
 ### Add the spinner
 
-You should now see the 10 latest posts on your front page, but no infinite scroll yet. Infinite Jekyll will only try to lazy load posts if there's a spinner visible. At the very end of `index.html`, add the spinner:
+You should see your 10 latest posts on the front page, but no infinite scroll yet. Infinite Jekyll will only try to lazy load posts if there's a spinner present. At the very end of `index.html`, add the spinner:
 
 	<div class="infinite-spinner"></div>
 
