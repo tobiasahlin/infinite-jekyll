@@ -44,6 +44,6 @@ You should now see the 10 latest posts on your front page, but no infinite scrol
 
 	<div class="infinite-spinner"></div>
 
-`spinner.css` contains a simple CSS spinner that works in the most modern browsers. Open up `css/main.css`, and at the very end, paste everything from `spinner.css`. 
+`spinner.css` contains a simple CSS spinner that works in most modern browsers. Open up `css/main.css`, and at the very end, paste everything from `spinner.css`. 
 
 And you're done! If you're having any issues, you can compare your project to the _Infinite Jekyll example page_.
