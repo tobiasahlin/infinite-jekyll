@@ -50,4 +50,4 @@ You should see your 10 latest posts on the front page, but no infinite scroll ye
 
 `spinner.css` contains a simple CSS spinner that works in most modern browsers. Open up `css/main.css`, and at the very end, paste everything from `spinner.css`. 
 
-Tada! You're done!
+And you're done. Happy scrolling!
