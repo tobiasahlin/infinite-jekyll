@@ -19,7 +19,7 @@ And how fun is it to only see links? Open up `index.html`. Find this line:
 
 	<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
 
-Remove everything within the `li`. Open up `_layouts/post.html` and copy the markup for single posts. Paste it within the `li`. This is how it should look using the default markup:
+Remove everything within the `li`. Open up `_layouts/post.html` and copy the markup for single posts. Paste it within the `li`, and replace every instance of `page.` with `post.`. This is how it should look using the default markup:
 
 	<li>
 		<h2>{{ post.title }}</h2>
