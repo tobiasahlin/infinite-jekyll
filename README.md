@@ -15,7 +15,7 @@ In `_layouts/default.html`, include `infinite-jekyll.js` after jQuery:
 
 ### Render posts, not links
 
-And how fun is it to only see links? Open up `index.html`. Find this line: 
+How fun is it to only see links? Open up `index.html`. Find this line: 
 
 	<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
 
