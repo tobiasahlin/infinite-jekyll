@@ -17,7 +17,7 @@ $(function() {
 	
   // If there's no spinner, it's not a page where posts should be fetched
   if ($(".infinite-spinner").length < 1)
-    shouldFetchPosts = false; 
+    shouldFetchPosts = false;
 	
   // Are we close to the end of the page? If we are, load more posts
   $(window).scroll(function(e){
@@ -68,7 +68,7 @@ $(function() {
     var postURL = postURLs[index];
 		
     $.get(postURL, function(data) {
-      $(data).find(".post").appendTo(".blog-posts");
+      $(data).find(".post").appendTo(".posts");
       callback();
     });
   }
