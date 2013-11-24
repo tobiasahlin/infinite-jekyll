@@ -5,7 +5,7 @@ Infinite scroll for Jekyll based blogs. See it in action at [tobiasahlin.com/blo
 
 ## Getting Started
 
-Include all files at the root of your Jekyll site. If you're not already using jQuery, open `_layouts/default.html` and include it:
+Add the `js` folder and `all-posts.json` to the root of your Jekyll site. If you're not already using jQuery, open `_layouts/default.html` and include it:
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
