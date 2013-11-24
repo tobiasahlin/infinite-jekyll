@@ -15,19 +15,11 @@ In `_layouts/default.html`, include `infinite-jekyll.js` after jQuery:
 
 ### Render posts, not links
 
-Per default, Jekyll renders links to all of your posts ever made. For lazy loading to make sense, we need to set a limit. Open up `index.html` and find this line:
-
-	{% for post in site.posts %}
-
-Change it to:
-
-	{% for post in site.posts limit: 10 %}	
-
 And how fun is it to only see links? Open up `index.html`. Find this line: 
 
 	<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
 
-Remove everything within the `li`. Open up `_layouts/post.html` and copy how single posts are rendered. Paste it within the `li`. This is how it should look using the default markup:
+Remove everything within the `li`. Open up `_layouts/post.html` and copy the markup for single posts. Paste it within the `li`. This is how it should look using the default markup:
 
 	<li>
 		<h2>{{ post.title }}</h2>
@@ -37,6 +29,18 @@ Remove everything within the `li`. Open up `_layouts/post.html` and copy how sin
 		{{ post.content }}
 		</div>
 	</li>
+
+### Limit the number of posts
+
+Per default, Jekyll renders all posts. For lazy loading to make sense, we need to set a limit. Open up `index.html` and find this line:
+
+	{% for post in site.posts %}
+
+Change it to:
+
+	{% for post in site.posts limit: 10 %}	
+
+You can change `10` to whatever number you like. The same number will be used for lazy loading new posts, so `10` will render 10 static post, and then fetch another 10 posts every time you get near the bottom of the page.
 
 ### Add the spinner
 
