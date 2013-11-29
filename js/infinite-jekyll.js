@@ -23,10 +23,10 @@ $(function() {
   $(window).scroll(function(e){
     if (!shouldFetchPosts || isFetchingPosts) return;
     
-    var windowHeight = $(window).height();
-    var windowScrollPosition = $(window).scrollTop();
-    var bottomScrollPosition = windowHeight + windowScrollPosition;
-    var documentHeight = $(document).height();
+    var windowHeight = $(window).height(),
+        windowScrollPosition = $(window).scrollTop(),
+        bottomScrollPosition = windowHeight + windowScrollPosition,
+        documentHeight = $(document).height();
     
     // If we've scrolled past the loadNewPostsThreshold, fetch posts
     if ((documentHeight - loadNewPostsThreshold) < bottomScrollPosition) {
