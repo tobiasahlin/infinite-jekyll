@@ -6,56 +6,25 @@
   background-color: #333;
   margin: 60px auto;
   
-  -webkit-animation: spinner 1.0s infinite ease-in-out;
-  -moz-animation: spinner 1.0s infinite ease-in-out;
-  -ms-animation: spinner 1.0s infinite ease-in-out;
-  animation: spinner 1.0s infinite ease-in-out;
+  -webkit-animation: scaleout 1.0s infinite ease-in-out;
+  animation: scaleout 1.0s infinite ease-in-out;
 }
 
-@-webkit-keyframes spinner {
-  0% {
-    -webkit-transform: scale(0.0);
-    opacity: 1;
-  }
-  
+@-webkit-keyframes scaleout {
+  0% { -webkit-transform: scale(0.0) }
   100% {
     -webkit-transform: scale(1.0);
     opacity: 0;
   }
 }
 
-@-moz-keyframes spinner {
-  0% {
-    -moz-transform: scale(0.0);
-    opacity: 1;
-  }
-  
-  100% {
-    -moz-transform: scale(1.0);
-    opacity: 0;
-  }
-}
-
-@-ms-keyframes spinner {
-  0% {
-    -ms-transform: scale(0.0);
-    opacity: 1;
-  }
-  
-  100% {
-    -ms-transform: scale(1.0);
-    opacity: 0;
-  }
-}
-
-@keyframes spinner {
+@keyframes scaleout {
   0% {
     transform: scale(0.0);
-    opacity: 1;
-  }
-  
-  100% {
+    -webkit-transform: scale(0.0);
+  } 100% {
     transform: scale(1.0);
+    -webkit-transform: scale(1.0);
     opacity: 0;
   }
 }
