@@ -62,7 +62,27 @@ with this:
 
 `/spinner.css` contains a simple CSS spinner that works in most modern browsers. Open up `css/main.css`, and at the very end, paste everything from `spinner.css`. 
 
-### Step 5 - Optional - Add CSS for the list elements
+### Step 5 - Prepare your post page
+The infinite scroll works by taking parts of your static html files of your posts and "inserting" them into the file we are scrolling into. Therefore an element with a `.post` class is required in the post html page. If you want to maintain the infinite scrolling across only the excerpts I recommend the following:
+```html
+<style>
+    .hidden {
+      display:none;
+    }
+</style>
+<section class="hidden">
+  <div class="post">
+      <a  class="post-list-title" href="{{ page.url }}">{{ page.title }}</a>
+      {% include post_meta.html type="post-card-meta" %}
+        <div class="post-excerpt">
+            {{ page.content | markdownify | strip_newlines | truncatewords: 100 }}<a class="read-more" href="{{ page.url }}"> read more</a>
+        </div>
+  </div>
+</section>
+```
+If you want to scroll across all of your full posts, then just ensure you have a DIV container with the `class="post"` encompassing your full blog post.
+
+### Step 6 - Optional - Add CSS for the list elements
 `/optional.css` contains an example of styles for the list to render properly, copy them into your `css/main.css` file as required.
 
 **And you're done. Happy scrolling!**
