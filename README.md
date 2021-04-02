@@ -13,7 +13,8 @@ The installation process is therefore divided in two parts accordingly:
 ## Getting Started - Basic Functionality (scroll across ALL SITE POSTS)
 
 ### Step 1 - copy files
-Copy the `infinite-jekyll.js` and `jquery-3.2.1.min.js` files to your `/assets/js/` folder and `all-posts.json` to the root of your Jekyll site.
+- Copy the `infinite-jekyll.js` and `jquery-3.2.1.min.js` files to your `/assets/js/` folder
+- Copy `all-posts.json` to the root of your Jekyll site.
 
 ### Step 2 - include js files in HTML
 Add the following HTML tags to the `/_layouts/head.html` (or `/_layouts/default.html`) file to ensure jquery and infinite jekyll are loaded:
@@ -70,7 +71,10 @@ with this:
 
 If you already did the above, and you have the basic functionality working fine the next steps are:
 
-### Step 1 - create the html file to show the filtered posts
+### Step 1 - copy json
+- Copy `posts-by-tag.json` to the root of your Jekyll site.
+
+### Step 2 - create the html file to show the filtered posts
 Copy `/_pages/tag.html` file into your own site's `/_pages/` directory.
 
 This page renders an HTML file with ALL the posts per tag, the trick is to hide them all, and only show the ones we want to scroll on, therefore we must add the following CSS to your `main.css` file:
@@ -78,7 +82,7 @@ This page renders an HTML file with ALL the posts per tag, the trick is to hide 
 .hidden{display:none}
 ```
 
-### Step 2 - create the links to the page
+### Step 3 - create the links to the page
 Whether you have a tags page or show the tags on your posts, you will need to link those to your new `tag.html` file properly for it to work.
 
 The liquid code for the link is:
