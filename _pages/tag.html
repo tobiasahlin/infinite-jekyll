@@ -3,6 +3,7 @@ layout: default
 title: Tag
 permalink: /tag/
 ---
+<style>.hidden{display:none}</style>
 {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
 {% assign tag_words = site_tags | split:',' | sort %}
 {% for item in (0..site.tags.size) %}{% unless forloop.last %}
