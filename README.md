@@ -63,7 +63,7 @@ with this:
 `/spinner.css` contains a simple CSS spinner that works in most modern browsers. Open up `css/main.css`, and at the very end, paste everything from `spinner.css`. 
 
 ### Step 5 - Prepare your post page
-The infinite scroll works by taking parts of your static html files of your posts and "inserting" them into the file we are scrolling into. Therefore an element with a `.post` class is required in the post html page. If you want to maintain the infinite scrolling across only the excerpts I recommend the following:
+The infinite scroll works by taking parts of your static html files of your posts and "inserting" them into the file we are scrolling into. Therefore, an element with a `.post` class is required in the `post.html` page, this file is typically found under the `/_layouts` folder. For the infinite scrolling to work in a page showing only post excerpts use this code within your `/_layouts_post.html` file:
 ```html
 <style>
     .hidden {
@@ -80,7 +80,7 @@ The infinite scroll works by taking parts of your static html files of your post
   </div>
 </section>
 ```
-If you want to scroll across all of your full posts, then just ensure you have a DIV container with the `class="post"` encompassing your full blog post.
+If you want to scroll across all of your full posts, then just ensure you have a DIV container with `class="post"` encompassing your full blog post.
 
 ### Step 6 - Optional - Add CSS for the list elements
 `/optional.css` contains an example of styles for the list to render properly, copy them into your `css/main.css` file as required.
