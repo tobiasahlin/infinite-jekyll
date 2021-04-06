@@ -1,0 +1,16 @@
+---
+layout: null
+---
+{% include get-site-tags.html %}
+[   {% for item in (0..site.tags.size) %}{% unless forloop.last %}
+      {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
+  {
+  "tag" : "{{ this_word }}",
+  "posts" : [
+      {% for post in site.tags[this_word] %}
+      "{{ post.url }}"{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]
+  } {% unless forloop.rindex == 2 %},{% endunless %}
+    {% endunless %}{% endfor %}
+]

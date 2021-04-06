@@ -1,0 +1,57 @@
+/* = = = = = = = = = = Post Lists  = = = = = = = = = = */
+.tag-master h1 {
+    color: #D5DEE2;
+}
+.list-group {
+  border-top: 1px solid #D5DEE2;
+  padding: 5px 10px;
+  margin-bottom:10px
+}
+.list-group-title {
+  margin-bottom:5px;
+  font-size:.75em;
+}
+.list-group-title a {
+    color: #212B30;
+    text-transform: lowercase;
+    font-weight: 600;
+}
+.list-item {
+    margin-bottom:20px
+}
+.list-item a {
+    display: block;
+    text-decoration: none;
+    color: #326273;
+    font-size:1.25em;
+    font-weight: 300;
+    font-family: sans-serif;
+}
+.list-item a:hover {
+    text-decoration: underline;
+    text-decoration-color:#D5DEE2;
+}
+.post:not(:last-child) {
+    border-bottom: 1px solid #D5DEE2;
+    margin-bottom: 1.5em;
+    padding-bottom: 1em
+}
+.post h1, .post h2,.post h3,.post h4,.post h5,.post h6 {
+    display: none;
+}
+.post img {
+    display: none;
+}
+a.post-list-title {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 2em;
+}
+a.read-more {
+    color: #879dab;
+    text-decoration:none
+}
+a.read-more:hover {
+    text-decoration:underline;
+    color: #326273;
+}
